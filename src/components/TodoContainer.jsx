@@ -18,7 +18,7 @@ const TodoContainer = () => {
   return (
     <div className="grid grid-cols-1">
       <nav>
-        <div>Tasks</div>
+        <div>Tasks List</div>
         <div>
           <button onClick={() => dispatch(deleteTodos())}>Clear All</button>
         </div>
