@@ -18,7 +18,7 @@ const TodoForm = () => {
   return (
     <div>
       <div>
-        <input placeholder="search a task" />
+        <input placeholder="search a task" className="text-3xl" />
       </div>
       <div>
         <form onSubmit={onSubmit}>
