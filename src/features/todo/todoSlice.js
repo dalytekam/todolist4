@@ -6,16 +6,16 @@ const todoList = [
   {
     id: "c0e250f6-473c-4f2e-a913-96f037e857d1",
     text: "Learn Linux",
-    completed: true
+    completed: false
   },
   {
     id: "c0e250f6-473c-4f2e-b913-97f037e857d1",
     text: "Learn Spring",
-    completed: true
+    completed: false
   },
   {
     id: "c0e250f6-473c-4g2e-b913-96f037e857d1",
-    text: "Learn HTML5",
+    text: "Make $3000,000a year!",
     completed: true
   }
 ];
@@ -36,8 +36,9 @@ const todoSlice = createSlice({
         completed: false,
         text: action.payload
       };
-      console.log(state.todos);
+
       state.todos.push(newTodo);
+
       state.total += 1;
     },
     toggleTodo: (state, action) => {
@@ -50,6 +51,7 @@ const todoSlice = createSlice({
     },
     deleteTodos: state => {
       state.todos = [];
+      state.total = 0;
     }
   }
 });

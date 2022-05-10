@@ -6,9 +6,12 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
 import todoReducer from "./features/todo/todoSlice";
+import displayedlistReducer from "./features/todo/displayedlistSlice";
+
 const store = configureStore({
   reducer: {
-    todo: todoReducer
+    todo: todoReducer,
+    displayedList: displayedlistReducer
   }
 });
 

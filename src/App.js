@@ -4,7 +4,7 @@ import TodoContainer from "./components/TodoContainer";
 
 function App() {
   return (
-    <div className="grid grid-cols-1">
+    <div className=" grid grid-cols-1 px-72">
       <Navbar />
       <TodoForm />
       <TodoContainer />

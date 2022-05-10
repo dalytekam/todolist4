@@ -16,9 +16,12 @@ const TodoForm = () => {
     setValue("");
   };
   return (
-    <div>
-      <div>
-        <input placeholder="search a task" className="text-3xl" />
+    <div className="grid grid-cols-2">
+      <div className="py-2">
+        <input
+          placeholder="Search a task"
+          className="border-b-2 border-indigo-600 outline-none text-3xl p-2"
+        />
       </div>
       <div>
         <form onSubmit={onSubmit}>
@@ -26,8 +29,14 @@ const TodoForm = () => {
             placeholder="Enter a task"
             value={value}
             onChange={e => setValue(e.target.value)}
+            className="text-3xl border-b-2 border-indigo-600 outline-none p-3"
           />
-          <button type="submit">Add a Task</button>
+          <button
+            className=" my-3 bg-indigo-400 border-b-2 border-indigo-600 text-xl p-3 w-44 rounded-full"
+            type="submit"
+          >
+            Add a Task
+          </button>
         </form>
       </div>
     </div>
