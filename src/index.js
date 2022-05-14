@@ -7,11 +7,14 @@ import { Provider } from "react-redux";
 
 import todoReducer from "./features/todo/todoSlice";
 import displayedlistReducer from "./features/todo/displayedlistSlice";
+import filterReducer from "./features/todo/filterSlice";
+
 
 const store = configureStore({
   reducer: {
     todo: todoReducer,
-    displayedList: displayedlistReducer
+    displayedList: displayedlistReducer,
+    filter:filterReducer
   }
 });
 

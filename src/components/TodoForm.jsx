@@ -2,9 +2,12 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../features/todo/todoSlice";
 import { useState } from "react";
+import {addFilterText} from '../features/todo/filterSlice'
+import {useSelector} from 'react-redux'
 
 const TodoForm = () => {
   const [value, setValue] = useState("");
+  const filteredCollection = useSelector(state => state.todo.todos);
   const dispatch = useDispatch();
   const onSubmit = e => {
     e.preventDefault();
@@ -21,7 +24,9 @@ const TodoForm = () => {
         <input
           placeholder="Search a task"
           className="border-b-2 border-indigo-600 outline-none text-3xl p-2"
-        />
+        onKeyUp={(e)=>{
+        dispatch(addFilterText(e.target.value.toLowerCase()))
+        }}/>
       </div>
       <div>
         <form onSubmit={onSubmit}>

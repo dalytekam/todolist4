@@ -10,17 +10,18 @@ const TodoContainer = () => {
   const dispatch = useDispatch();
   const todos = useSelector(state => state.todo.todos);
   const listState = useSelector(state => state.displayedList.listState);
+  const filterText = useSelector(state => state.filter.filterText);
   
-  let listTodisplay = todos; 
+  let listTodisplay = todos.filter(todo => todo.text.includes(filterText)); 
 
     if(listState === "all"){
-      listTodisplay = todos;
+      listTodisplay = todos.filter(todo => todo.text.toLowerCase().includes(filterText));
       }else if (listState === "completed"){
-        listTodisplay = todos.filter(todo => todo.completed === true);
+        listTodisplay = todos.filter(todo => todo.completed === true &&
+        todo.text.toLowerCase().includes(filterText));
       }else{
-        listTodisplay = todos.filter(todo => todo.completed === false);}
-
-console.log(listTodisplay);
+        listTodisplay = todos.filter(todo => todo.completed === false &&
+        todo.text.toLowerCase().includes(filterText));}
 
  useEffect(() => {
     const fetchTodos = () => {
@@ -33,7 +34,7 @@ console.log(listTodisplay);
   return (
     <div className="grid grid-cols-1">
       <nav className="grid grid-cols-2">
-        <div className="text-4xl p-3 self-end  ">{"Tasks List".toLocaleUpperCase()}</div>
+        <div className="text-4xl p-3 self-end  ">Tasks List</div>
         <div>
           <button
             className="text-xl bg-red-600 p-3 text-white my-3 w-44 rounded-full"
