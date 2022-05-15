@@ -23,7 +23,7 @@ const TodoForm = () => {
       <div className="py-2">
         <input
           placeholder="Search a task"
-          className="border-b-2 border-indigo-600 outline-none text-3xl p-2"
+          className="border-b border-indigo-600 outline-none text-3xl p-2"
         onKeyUp={(e)=>{
         dispatch(addFilterText(e.target.value.toLowerCase()))
         }}/>
@@ -34,10 +34,10 @@ const TodoForm = () => {
             placeholder="Enter a task"
             value={value}
             onChange={e => setValue(e.target.value)}
-            className="text-3xl border-b-2 border-indigo-600 outline-none p-3"
+            className="text-3xl border-b border-indigo-600 outline-none p-3"
           />
           <button
-            className=" my-3 bg-blue-100 border-b-2 text-xl p-3 w-44 rounded-full"
+            className=" my-3 bg-blue-100 text-xl py-1 w-44 rounded-full"
             type="submit"
           >
             Add a Task

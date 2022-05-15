@@ -37,7 +37,7 @@ const TodoContainer = () => {
         <div className="text-4xl p-3 self-end  ">Tasks List</div>
         <div>
           <button
-            className="text-xl hover:bg-red-600 hover:text-white border-2 p-3  my-3 w-44 rounded-full"
+            className="text-xl hover:bg-red-600 hover:text-white border-2 py-1  my-3 w-44 rounded-full"
             onClick={() => dispatch(deleteTodos())}
           >
             Clear All

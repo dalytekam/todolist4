@@ -19,12 +19,12 @@ if(item.classList.contains("bg-blue-300")){
   item.classList.remove("bg-blue-300");}
 })};
   return (
-    <nav className="grid grid-cols-3 gap-4 items-center border-2 my-2 h-38 bg-gray-100 rounded-full ">
+    <nav className="grid grid-cols-3 gap-4 items-center border my-2 h-38 bg-gray-100 rounded-full ">
       <div className="col-span-1 ">
         <h2 className="text-center px-2 text-6xl font-bold text-blue-400">TodoList</h2>
       </div>
       <div className="grid gap-4  justify-center ">
-        <h3 className="font-bold filterItem text-sm border-2 border-blue-200 rounded-full justify-items-center text-center py-1  hover:cursor-pointer w-32" onClick={(e) => {dispatch(setListState(e.target.innerText.toLowerCase()));
+        <h3 className="font-bold filterItem text-sm border border-blue-200 rounded-full justify-items-center text-center py-1  hover:cursor-pointer w-32" onClick={(e) => {dispatch(setListState(e.target.innerText.toLowerCase()));
          removeBackgroundColor();
         e.target.classList.add("bg-blue-300");
        }}
@@ -33,7 +33,7 @@ if(item.classList.contains("bg-blue-300")){
         </h3>
         <h3
           
-          className="font-bold filterItem text-sm border-2 border-blue-200 rounded-full justify-items-center text-center py-1  hover:cursor-pointer  w-32" onClick={(e) => {dispatch(setListState(e.target.innerText.toLowerCase()));
+          className="font-bold filterItem text-sm border border-blue-200 rounded-full justify-items-center text-center py-1  hover:cursor-pointer  w-32" onClick={(e) => {dispatch(setListState(e.target.innerText.toLowerCase()));
          removeBackgroundColor();
         e.target.classList.add("bg-blue-300");
        }}
@@ -42,7 +42,7 @@ if(item.classList.contains("bg-blue-300")){
         </h3>
         <h3
          
-          className="font-bold filterItem text-sm border-2 border-blue-200 rounded-full justify-items-center text-center py-1  hover:cursor-pointer  w-32" onClick={(e) => {dispatch(setListState(e.target.innerText.toLowerCase()));
+          className="font-bold filterItem text-sm border border-blue-200 rounded-full justify-items-center text-center py-1  hover:cursor-pointer  w-32" onClick={(e) => {dispatch(setListState(e.target.innerText.toLowerCase()));
          removeBackgroundColor();
         e.target.classList.add("bg-blue-300");
        }}
