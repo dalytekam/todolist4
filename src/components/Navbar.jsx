@@ -19,7 +19,7 @@ if(item.classList.contains("bg-blue-300")){
   item.classList.remove("bg-blue-300");}
 })};
   return (
-    <nav className="grid grid-cols-3 gap-4 items-center border-2 my-2 h-38 bg-blue-100 rounded-full ">
+    <nav className="grid grid-cols-3 gap-4 items-center border-2 my-2 h-38 bg-gray-100 rounded-full ">
       <div className="col-span-1 ">
         <h2 className="text-center px-2 text-6xl font-bold text-blue-400">TodoList</h2>
       </div>

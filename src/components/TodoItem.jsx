@@ -21,13 +21,14 @@ const TodoItem = ({ id, text, completed }) => {
           : "line-through text-gray-300 ml-2"
       }>{text}</p>
       </div>
-      <div className ={!completed ?" grid  justify-items-end":"last:grid  justify-items-end"}>
+      <div className ={!completed ?" grid justify-items-end ":"grid  justify-items-end"}>
         <button
           className="text-red-600 border-2 px-4 py-1 rounded-full hover:bg-red-600 hover:text-white"
           onClick={() => dispatch(deleteTodo(id))}
         >
           Delete
         </button>
+       
       </div>
     </div>
   );

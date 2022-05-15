@@ -37,7 +37,7 @@ const TodoForm = () => {
             className="text-3xl border-b-2 border-indigo-600 outline-none p-3"
           />
           <button
-            className=" my-3 bg-indigo-400 border-b-2 border-indigo-600 text-xl p-3 w-44 rounded-full"
+            className=" my-3 bg-blue-100 border-b-2 text-xl p-3 w-44 rounded-full"
             type="submit"
           >
             Add a Task
