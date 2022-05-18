@@ -10,15 +10,15 @@ const TodoItem = ({ id, text, completed }) => {
       onClick={() => dispatch(toggleTodo(id))}
       className={
         !completed
-          ? "border border-black grid grid-cols-2  my-2 p-2 px-4 hover:cursor-pointer rounded-full justify-between"
-          : "border-2 border-gray-100 grid grid-cols-2  my-2 px-4 p-2  text-gray-300 hover:cursor-pointer rounded-full"
+          ? "border border-black grid grid-cols-2  my-2 p-2 px-4 hover:cursor-pointer rounded-full justify-between items-center"
+          : "border-2 border-gray-100 grid grid-cols-2  my-2 px-4 p-2  text-gray-300 hover:cursor-pointer rounded-full justify-between items-center"
       }
     >
       <div>
         <p  className={
         !completed
-          ? "ml-2"
-          : "line-through text-gray-300 ml-2"
+          ? "ml-2 text-lg "
+          : "line-through text-gray-300 ml-2 text-lg"
       }>{text}</p>
       </div>
       <div className ={!completed ?" grid justify-items-end ":"grid  justify-items-end"}>
